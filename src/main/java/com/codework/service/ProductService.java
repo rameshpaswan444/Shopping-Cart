@@ -1,5 +1,6 @@
 package com.codework.service;
 
+import com.codework.dto.ProductDto;
 import com.codework.model.Product;
 import com.codework.request.AddProductRequest;
 import com.codework.request.ProductUpdateRequest;
@@ -20,4 +21,7 @@ public interface ProductService {
     List<Product> getProductsByBrandAndName(String brand, String name);
     Long countProductsByBrandAndName(String brand, String name);
 
+    List<ProductDto> getConvertedProducts(List<Product> products);
+
+    ProductDto convertToDto(Product product);
 }
